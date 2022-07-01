@@ -2,13 +2,13 @@
 
 # SITE Capstone Project
 
-SITE Course Year: **20__**
+SITE Course Year: **2022**
 
-Cohort: **Add Company Sponsor Name**
+Cohort: **Workday**
 
-Team Member Names:**Insert Team Member Names**
+Team Member Names:**Travis Navarro, Aileen Ji, Ernesto Enriquez**
 
-Mentors Names: **Insert Professional Mentor Names**
+Mentors Names: **Charnpreet Singh, Lance Tokuno, Kate Perkins**
 
 Project Code Repository Links
 
