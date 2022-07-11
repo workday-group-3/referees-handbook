@@ -113,9 +113,10 @@ Beginner courses Table:
 | ----------- | ---- | ----------- |
 | id | integer | Primary key |
 | sport_name | text | Name of sport to be listed under |
-| user_id | integer | Id of the user who created the course |
 | beginner_history_timeline| text | Timeline URL for iframe to run timeline widget |
 | beginner_rules | text | Rules of the sport |
+| beginner_short_description | text | Sentence long hook for the user to draw in readers, shown in course list page |
+| beginner_cover_image_URL | text | Cover image, shown in course list page |
 | beginner_tutorial_video_URL | text | URL to tutorial video for sport |
 | beginner_field_diagram_URL | text | Image URL for field diagram |
 | created_at | date | Beginner course created date |
@@ -128,6 +129,8 @@ User created courses Table:
 | sport_name | text | Name of sport to be listed under |
 | user_id | integer | Id of the user who created the course |
 | course_title | text | Title of the course |
+| course_short_description | text | Sentence long hook for the user to draw in readers, shown in course list page |
+| course_cover_image_URL | text | Cover image, shown in course list page |
 | course_content | text | Main content of the course |
 | course_tutorial_video_URL | text | URL to tutorial video |
 | course_tips_tricks | text | Content for tips and trick |
