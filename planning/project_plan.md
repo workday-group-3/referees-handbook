@@ -111,6 +111,8 @@ Courses Table:
 | Column Name | Type | Description |
 | ----------- | ---- | ----------- |
 | id | integer | Primary key |
+| sport_name | text | Name of sport to be listed under |
+| user_id | integer | Id of the user who created the course |
 | course_title | text | Title of the course |
 | course_content | text | Main content of the course |
 | course_tutorial_video_URL | text | URL to tutorial video |
