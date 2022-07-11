@@ -34,7 +34,7 @@ Age 36, high level sophistication with technology, uses a desktop, and accesses 
 Motivation is to check for new developments in football community, and add new football plays he could use during practice for his team
 Potential pain points might be loading times throughout the site, being able to sort by newest courses to check latest developments
 
-Josh, college hockey fan, 24 years old, recent college graduate, very familiar with technology. They mainly use a phone and access the site daily. Their motivation is to keep up with their school's hockey team because they love school spirit, potential pain points is easy access to the specific team and sport they are interested in.
+Josh, Golden State Warriors fan, 24 years old, recent college graduate from California, very familiar with technology. They mainly use a phone and access the site daily. Their motivation is to keep up with Golden State Warrior because they love the team, potential pain points is easy access to the specific team and sport they are interested in.
 
 
 Isabella, basketball fan, 30 year old from Boston, Massachusetts, busy businesswoman, not super good with technology. She mainly uses her computer and access the site every week. Her motivation is to keep up with information related to her favorite basketball team without having to spend a lot of time using search engines. Potential pain points are being able to navigate the website and search for useful information easily.
@@ -141,16 +141,16 @@ List the API endpoints you will need to implement.
 
 | CRUD | HTTP Verb | Description | User stories |
 | ---- | --------- | ----------- |------------|
-|Read|GET|Fetches standings, recent matches and news about a specific sport|3, 7, 10|
-|Read|POST|Logs the user in|6|
-|Create|POST|Creates a new user account|6|
-|Read|GET|Fetch the user's profile||
+|Read|GET|Fetches standings, recent matches and news about a specific sport|3, 7|
+|Read|POST|Logs the user in|6, 8, 10|
+|Create|POST|Creates a new user account|6, 8, 10|
+|Read|GET|Fetch the user's profile|6, 8, 10|
 |Read|GET|Fetches a list of teams for a sport|3, 7|
 |Read|GET|Fetches detailed information about a specific team|3, 7, 10|
-|Read|GET|Fetches images for courses of a specific sport|4|
-|Create|POST|Creates a new course for a specific sport|6|
-|Read|GET|Fetches the beginner course for a specific sport|1, 4|
-|Read|GET|Fetches a list of user created courses for a specific sport|2, 4|
-|Read|GET|Fetches a specific course created by a user|2|
+|Read|GET|Fetches images for courses of a specific sport|4, 9|
+|Create|POST|Creates a new course for a specific sport|6, 8|
+|Read|GET|Fetches the beginner course for a specific sport|1, 4, 5|
+|Read|GET|Fetches a list of user created courses for a specific sport|2, 4, 9|
+|Read|GET|Fetches a specific course created by a user|2, 9|
 
 ***Don't forget to set up your Issues, Milestones, and Project Board!***
