@@ -78,7 +78,7 @@ Login, registration, landing, home, profile, learning center, beginner course, u
 
 Wireframes contained in figma link below:
 
-[List all the pages and screens in the app. Include wireframes for at least 3 of them.](https://www.figma.com/file/6C4n8jyxLDV2LetttFvioE/Referee-handbook-wireframe?node-id=0%3A1)
+[![image](https://user-images.githubusercontent.com/73731802/178373605-807ca31c-7998-485c-a6c7-2dabb8d9209e.png)](https://www.figma.com/file/6C4n8jyxLDV2LetttFvioE/Referee-handbook-wireframe?node-id=0%3A1)
 
 ## Data Model
 
