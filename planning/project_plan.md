@@ -60,17 +60,17 @@ As a basketball fan, I want a platform that displays all things related to baske
 
 As a beginner soccer player, I wish to find a platform for learning more about how to get better at the game because, as a complete beginner, I’m not sure where I should start in my sports journey. 
 
-As a student studying the history of a sports team, I want to see who won a certain golf game back in 2011 because…
+As a student studying the history of my new favorite sport, I want to see it's evolution throughout the years
 
 As a retired basketball coach, I want to create online courses for others so I can share my passion and accumulated understanding of the game with future players. 
 
 As an NBA fan, I want a website that delivers up to date basketball news because I love keeping up with the latest updates on players and teams. 
 
-As an amateur ultimate frisbee enthusiast, I want to find nearby events related to my interest because I hope to find a community with others that have the similar interest. 
+As an innovative tennis player, I want a website that allows me to share my upcoming and new techniques, because I love showing newer players my hidden strategies in tennis.
 
-As an arm wrestling fan,I want to find nearby users who share similar interests because finding communities who hold interests in esoteric sports can be difficult. 
+As someone who likes to dabble in all sports, I want one central hub that I can rely on so I can keep up to date with new courses & strategies in each sports community and stay on top of my game.
 
-As a college hockey fan, I want to keep up with the latest college news for my alma mater because I love school spirit. 
+As a Golden State Warriors fan, I want to be able to keep up with their recents game quickly and see an up to date stat sheet with their win/loss record, so I can keep up with analysts when I watch the game.
 
 ## Pages/Screens
 
