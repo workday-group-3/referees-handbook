@@ -84,6 +84,38 @@ Wireframes contained in figma link below:
 
 Describe your app's data model using diagrams or tables
 
+User Table:
+
+| Column Name | Type | Description |
+| ----------- | ---- | ----------- |
+| id | integer | Primary key |
+| email | text | User's email |
+| password | text | User's password |
+| first_name | text | User's first name |
+| last_name | text | User's last name |
+| created_at | date | User's account creation date |
+
+Followers to following Table:
+
+| Column Name | Type | Description |
+| ----------- | ---- | ----------- |
+| follower_id | integer | Primary key |
+| following_id | integer | Id of team user is following |
+| following_at | date | Date user started following the team |
+
+
+Courses Table:
+
+| Column Name | Type | Description |
+| ----------- | ---- | ----------- |
+| id | integer | Primary key |
+| course_title | text | Title of the course |
+| course_content | text | Main content of the course |
+| course_tutorial_video_URL | text | URL to tutorial video |
+| course_tips_tricks | text | Content for tips and trick |
+| created_at | date | Course created date |
+
+
 ## Endpoints
 
 List the API endpoints you will need to implement.
