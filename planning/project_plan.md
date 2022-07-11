@@ -114,7 +114,7 @@ Beginner courses Table:
 | id | integer | Primary key |
 | sport_name | text | Name of sport to be listed under |
 | user_id | integer | Id of the user who created the course |
-| beginner_history | ?????????? (Need to store array of objects) | History of sport throughout the years |
+| beginner_history_timeline| text | Timeline URL for iframe to run timeline widget |
 | beginner_rules | text | Rules of the sport |
 | beginner_tutorial_video_URL | text | URL to tutorial video for sport |
 | beginner_field_diagram_URL | text | Image URL for field diagram |
