@@ -106,7 +106,21 @@ Followers to following Table:
 | following_at | date | Date user started following the team |
 
 
-Courses Table:
+
+Beginner courses Table:
+
+| Column Name | Type | Description |
+| ----------- | ---- | ----------- |
+| id | integer | Primary key |
+| sport_name | text | Name of sport to be listed under |
+| user_id | integer | Id of the user who created the course |
+| beginner_history | ?????????? (Need to store array of objects) | History of sport throughout the years |
+| beginner_rules | text | Rules of the sport |
+| beginner_tutorial_video_URL | text | URL to tutorial video for sport |
+| beginner_field_diagram_URL | text | Image URL for field diagram |
+| created_at | date | Beginner course created date |
+
+User created courses Table:
 
 | Column Name | Type | Description |
 | ----------- | ---- | ----------- |
@@ -123,20 +137,5 @@ Courses Table:
 ## Endpoints
 
 List the API endpoints you will need to implement.
-
-| CRUD | HTTP Verb | Description | User stories |
-| ---- | --------- | ----------- |------------|
-|Read|GET|Fetches standings, recent matches and news about a specific sport|3, 7, 10|
-|Read|POST|Logs the user in|6|
-|Create|POST|Creates a new user account|6|
-|Read|GET|Fetch the user's profile||
-|Read|GET|Fetches a list of teams for a sport|3, 7|
-|Read|GET|Fetches detailed information about a specific team|3, 7, 10|
-|Read|GET|Fetches images for courses of a specific sport|4|
-|Create|POST|Creates a new course for a specific sport|6|
-|Read|GET|Fetches the beginner course for a specific sport|1, 4|
-|Read|GET|Fetches a list of user created courses for a specific sport|2, 4|
-|Read|GET|Fetches a specific course created by a user|2|
-
 
 ***Don't forget to set up your Issues, Milestones, and Project Board!***
