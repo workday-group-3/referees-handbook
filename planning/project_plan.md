@@ -90,9 +90,11 @@ User Table:
 | ----------- | ---- | ----------- |
 | id | integer | Primary key |
 | email | text | User's email |
+| username | text | User's username |
 | password | text | User's password |
 | first_name | text | User's first name |
 | last_name | text | User's last name |
+| location | text | User's city and state |
 | created_at | date | User's account creation date |
 
 Followers to following Table:
