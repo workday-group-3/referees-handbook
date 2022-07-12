@@ -12,6 +12,9 @@ Mentors Names: **Charnpreet Singh, Lance Tokuno, Kate Perkins**
 
 Project Code Repository Links
 
+* [Repo link](https://github.com/Ernesto905/Capstone-Starter-Code)
+* [API Docs repo link](https://github.com/aileen-ji/CapstoneAPIDocs)
+
 * [Frontend Repo Link]()
 * [Backend Repo Link]()
 
