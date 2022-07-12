@@ -1,0 +1,92 @@
+_id: spc_6e4352bb3ca24fbc9b354a2061802f77
+type: ApiSpec
+parentId: wrk_f877917a9e794c85bc805f7c64361ae3
+modified: 1657656118927
+created: 1657645817294
+fileName: referee-handbook-v1.yaml
+contents: "openapi: 3.0.3
+
+
+  info:
+
+  \  title: Referee's Handbook API\ 
+
+  \  description: API for Referee's Handbook, pod w3's capstone project for
+  Codepath's SITE program 2022
+
+  \  version: 0.1.0
+
+  \ \ 
+
+  servers:
+
+  - url: https://jsonplaceholder.typicode.com
+
+  \  description: JSONPlaceholder
+
+  \ \ 
+
+  paths:
+
+  \  \"/auth/login\":
+
+  \    post:
+
+  \      tags: [\"auth\"]
+
+  \      summary: User can login with valid credentials.
+
+  \      responses:
+
+  \        \"200\":
+
+  \          description: Success
+
+  \          content:
+
+  \            application/json:
+
+  \              schema:
+
+  \                $ref: \"#/components/schemas/user\"
+
+  \                 \ 
+
+  components:
+
+  \  schemas:
+
+  \    post:
+
+  \      type: object
+
+  \      properties:
+
+  \        id:
+
+  \          type: number
+
+  \          description: ID of the post
+
+  \        title:
+
+  \          type: string
+
+  \          description: title of the post
+
+  \        body:
+
+  \          type: string
+
+  \          description: Body of the post
+
+  \        userId:
+
+  \          type: number
+
+  \          description: ID of the user who created the post
+
+  \        \ 
+
+  \       "
+contentType: yaml
