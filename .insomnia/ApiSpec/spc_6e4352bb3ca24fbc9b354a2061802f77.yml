@@ -1,7 +1,7 @@
 _id: spc_6e4352bb3ca24fbc9b354a2061802f77
 type: ApiSpec
 parentId: wrk_f877917a9e794c85bc805f7c64361ae3
-modified: 1657659517670
+modified: 1657663154102
 created: 1657645817294
 fileName: referee-handbook-v1.yaml
 contents: "openapi: 3.0.3
@@ -108,10 +108,6 @@ contents: "openapi: 3.0.3
 
   \                  status: 401
 
-  \              schema:
-
-  \                $ref: \"#/components/schemas/user\"
-
   \         \ 
 
   \  \"/auth/register\":
@@ -142,11 +138,11 @@ contents: "openapi: 3.0.3
 
   \                  type: string
 
-  \                first_name:
+  \                firstName:
 
   \                  type: string
 
-  \                last_name:
+  \                lastName:
 
   \                  type: string
 
@@ -166,9 +162,9 @@ contents: "openapi: 3.0.3
 
   \                password: pw \ 
 
-  \                first_name: Doug
+  \                firstName: Doug
 
-  \                last_name: Case
+  \                lastName: Case
 
   \                username: dougcase
 
@@ -179,6 +175,14 @@ contents: "openapi: 3.0.3
   \                - email
 
   \                - password
+
+  \                - firstName
+
+  \                - lastName
+
+  \                - username
+
+  \                - location
 
   \               \ 
 
@@ -227,10 +231,6 @@ contents: "openapi: 3.0.3
   \                  message: \"Duplicate email: me@mail.com\"
 
   \                  status: 400
-
-  \              schema:
-
-  \                $ref: \"#/components/schemas/user\"
 
 
   \  \"/auth/me\":
@@ -283,10 +283,6 @@ contents: "openapi: 3.0.3
 
   \                  status: 401
 
-  \              schema:
-
-  \                $ref: \"#/components/schemas/user\"
-
 
   \  \"/learning/:sportName\":
 
@@ -308,39 +304,250 @@ contents: "openapi: 3.0.3
 
   \              schema:
 
-  \                $ref: \"#/components/schemas/beginner\"
+  \                type: object
+
+  \                properties:
+
+  \                  sportName:
+
+  \                    type: string
+
+  \                  beginner:
+
+  \                    type: object
+
+  \                    properties:
+
+  \                      beginnerCoverImageUrl:
+
+  \                        type: string
+
+  \                      beginnerShortDescription:
+
+  \                        type: string
+
+  \                  userCreated:
+
+  \                    type: array
+
+  \                    items:
+
+  \                      type: object
+
+  \                      properties:
+
+  \                        courseShortDescription:
+
+  \                          type: string
+
+  \                        courseCoverImageURL:
+
+  \                          type: string    \ 
+
+  \                        courseTitle:
+
+  \                          type: string
+
+  \                        id:
+
+  \                          type: integer
+
+  \              example:
+
+  \                sportName: soccer
+
+  \                beginner:
+
+  \                  beginnerCoverImageUrl:
+  \"https://tse2.mm.bing.net/th?id=OIP.vTPB6EBZxumVAyFpHyGe3wHaE7&pid=Api&P=0&w\
+  =265&h=177\"
+
+  \                  beginnerShortDescription: Learn about the world's most
+  popular sport
+
+  \                userCreated:
+
+  \                  - id: 1
+
+  \                    courseTitle: the roulette
+
+  \                    courseShortDescription: learn this legendary spin move.
+
+  \                    courseCoverImageURL:
+  \"https://live.staticflickr.com/60/226892814_1fe4503669_b.jpg\"
+
+  \                  - id: 2
+
+  \                    courseTitle: the rainbow flick
+
+  \                    courseShortDescription: impressive move, though rarely
+  used in games.
+
+  \                    courseCoverImageURL:
+  \"https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Neymar_2011.jpg/1\
+  70px-Neymar_2011.jpg\"
+
+  \               \ 
+
+  \        \"404\":
+
+  \          description: not found
+
+  \          content:\ 
+
+  \            application/json:
+
+  \              example:
+
+  \                error:
+
+  \                  message: \"course does not exist\"
+
+  \                  status: 404
+
+  \    post:
+
+  \      tags: [\"learning\"]
+
+  \      summary: creates a new user created course under the sport listed
+
+  \      requestBody:\ 
+
+  \        content:
+
+  \          application/json:
+
+  \            schema:
+
+  \              type: object
+
+  \              properties:
+
+  \                courseTitle:
+
+  \                  type: string
+
+  \                courseShortDescription:
+
+  \                  type: string
+
+  \                courseCoverImageURL:
+
+  \                  type: string
+
+  \                courseContent:
+
+  \                  type: string
+
+  \                courseTutorialVideoURL:
+
+  \                  type: string
+
+  \                courseTipsTricks:
+
+  \                  type: string
+
+  \              example:
+
+  \                courseTitle: curveball throwing
+
+  \                courseShortDescription: a short tutorial on throwing
+  curveballs.
+
+  \                courseCoverImageURL:
+  \"https://www.publicdomainpictures.net/pictures/90000/nahled/smokin-baseball.\
+  jpg\"
+
+  \                courseContent: Hold the baseball properly.
+
+  \                courseTutorialVideoURL:
+  \"https://www.youtube.com/watch?v=XJYH3M1Pxbc\"
+
+  \                courseTipsTricks: Keep your grip hidden.
+
+  \              required:
+
+  \                - courseTitle
+
+  \                - courseShortDescription
+
+  \                - courseCoverImageURL
+
+  \                - courseContent
+
+  \                - courseTutorialVideoURL
+
+  \                - courseTipsTricks
+
+  \      responses:
+
+  \        \"200\":
+
+  \          description: OK
+
+  \          content:\ 
+
+  \            application/json:
+
+  \              schema:
+
+  \                $ref: \"#/components/schemas/userCreated\"
 
   \              example:
 
   \                id: 1
 
-  \                sport_name: basketball
+  \                sportName: baseball
 
-  \                beginner_history_timeline:
-  \"https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1xu\
-  Y4upIooEeszZ_lCmeNx24eSFWe0rHe9ZdqH2xqVNk&font=Default&lang=en&initial_zoom=2\
-  &height=100%\"
+  \                UserId: 1
 
-  \                beginner_rules: Score more points than the other team to
-  win
+  \                courseTitle: curveball throwing
 
-  \                beginner_short_description: Learn about the sport of
-  basketball
+  \                courseShortDescription: a short tutorial on throwing
+  curveballs.
 
-  \                beginner_cover_image_URL:
-  \"https://avatars.githubusercontent.com/u/108555405?s=400&u=49904b08dfecbfdac\
-  6d3b0ff333e899844c2eeee&v=4\"
+  \                courseCoverImageURL:
+  \"https://www.publicdomainpictures.net/pictures/90000/nahled/smokin-baseball.\
+  jpg\"
 
-  \                beginner_tutorial_video_URL:
-  \"https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley\"
+  \                courseContent: Hold the baseball properly.
 
-  \                beginner_field_diagram_URL: \"www.google.com\"
+  \                courseTutorialVideoURL:
+  \"https://www.youtube.com/watch?v=XJYH3M1Pxbc\"
 
-  \                created_at: \"2019-06-24-15.30.20\"
+  \                courseTipsTricks: Keep your grip hidden.
 
-  \        \"404\":
+  \                createdAt: \"2019-06-24-15.30.20\"
 
-  \          description: not found
+  \        \"400\":
+
+  \          description: bad request
+
+  \          content:\ 
+
+  \            application/json:
+
+  \              example:
+
+  \                error:
+
+  \                  message: Missing courseTitle in request body.
+
+  \                  status: 400
+
+  \  \"/learning/:sportName/beginner\":
+
+  \    get:
+
+  \      tags: [\"learning\"]
+
+  \      summary: returns the beginner course for a sport
+
+  \      responses:
+
+  \        \"200\":
+
+  \          description: OK
 
   \          content:\ 
 
@@ -352,13 +559,143 @@ contents: "openapi: 3.0.3
 
   \              example:
 
+  \                id: 1
+
+  \                sport_name: basketball
+
+  \                beginnerHistoryTimeline:
+  \"https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1xu\
+  Y4upIooEeszZ_lCmeNx24eSFWe0rHe9ZdqH2xqVNk&font=Default&lang=en&initial_zoom=2\
+  &height=100%\"
+
+  \                beginnerRules: Score more points than the other team to win
+
+  \                beginnerShortDescription: Learn about the sport of
+  basketball
+
+  \                beginnerCoverImage_URL:
+  \"https://img.rawpixel.com/private/static/images/website/2022-05/upwk61914619\
+  -wikimedia-image-kowebq0k.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3\
+  &con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=1eb3b7dcd268b9a9eba66f624512f434\"
+
+  \                beginnerTutorialVideoURL:
+  \"https://www.youtube.com/watch?v=CMQp0bwjokw&ab_channel=GetHandlesBasketball\
+  \"
+
+  \                beginnerFieldDiagramURL:
+  \"https://cdn2.picryl.com/photo/2012/03/29/the-warrior-fitness-centers-three-\
+  basketball-courts-3a919f-1600.jpg\"
+
+  \                createdAt: \"2019-06-24-15.30.20\"
+
+  \        \"404\":
+
+  \          description: not found
+
+  \          content:\ 
+
+  \            application/json:
+
+  \              example:
+
   \                error:
 
   \                  message: \"course does not exist\"
 
   \                  status: 404
 
-  \         \ 
+  \                 \ 
+
+  \  \"/learning/:sportName/userCreated/:courseId\":
+
+  \    get:
+
+  \      tags: [\"learning\"]
+
+  \      summary: returns a specific user created course for a sport
+
+  \      responses:
+
+  \        \"200\":
+
+  \          description: OK
+
+  \          content:\ 
+
+  \            application/json:
+
+  \              schema:
+
+  \                $ref: \"#/components/schemas/userCreated\"
+
+  \              example:
+
+  \                id: 1
+
+  \                userId: 3
+
+  \                sport_name: soccer
+
+  \                courseTitle: the rainbow flick
+
+  \                courseShortDescription: impressive move, though rarely used
+  in games.
+
+  \                courseContent: learn to flick the soccer ball over your
+  head by watching the tutorial video.
+
+  \                courseCoverImageURL:
+  \"https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Neymar_2011.jpg/1\
+  70px-Neymar_2011.jpg\"
+
+  \                courseTutorialVideoURL:
+  \"https://www.youtube.com/watch?v=aQtcAwE4xHA&feature=emb_logo&ab_channel=Uni\
+  sport\"
+
+  \                courseTipsTricks: practice from a standing position first.
+
+  \                createdAt: \"2019-06-24-15.30.20\"
+
+  \        \"404\":
+
+  \          description: not found
+
+  \          content:\ 
+
+  \            application/json:
+
+  \              example:
+
+  \                error:
+
+  \                  message: \"course does not exist\"
+
+  \                  status: 404
+
+
+  \  \"/home/:sportName/:teamId\":
+
+  \    get:
+
+  \      tags: [\"home\"]
+
+  \      summary: returns detailed information about a specific team
+
+  \      responses:
+
+  \        \"200\":
+
+  \          description: OK
+
+  \          content:
+
+  \            application/json:
+
+  \              example:
+
+  \               \ 
+
+  \           \ 
 
 
   components:
@@ -395,13 +732,13 @@ contents: "openapi: 3.0.3
 
   \          description: password of the user
 
-  \        first_name:
+  \        firstName:
 
   \          type: string
 
   \          description: first name of the user
 
-  \        last_name:
+  \        lastName:
 
   \          type: string
 
@@ -413,7 +750,7 @@ contents: "openapi: 3.0.3
 
   \          description: city and state of the user
 
-  \        created_at:
+  \        createdAt:
 
   \          type: string
 
@@ -433,54 +770,119 @@ contents: "openapi: 3.0.3
 
   \          description: primary key, id of the course
 
-  \        sport_name:
+  \        sportName:
 
   \          type: string
 
   \          description: name of sport the course is listed under
 
-  \        beginner_history_timeline:
+  \        beginnerHistoryTimeline:
 
   \          type: string
 
   \          description: timeline URL for iframe to run timeline widget
 
-  \        beginner_rules:
+  \        beginnerRules:
 
   \          type: string
 
   \          description: rules of the sport
 
-  \        beginner_short_description:
+  \        beginnerShortDescription:
 
   \          type: string
 
   \          description: Sentence long hook for the user to draw in readers,
   shown in course list page
 
-  \        beginner_cover_image_URL:
+  \        beginnerCoverImageURL:
 
   \          type: string
 
   \          description: Cover image, shown in course list page
 
-  \        beginner_tutorial_video_URL:
+  \        beginnerTutorialVideoURL:
 
   \          type: string
 
   \          description: URL to tutorial video for sport
 
-  \        beginner_field_diagram_URL:
+  \        beginnerFieldDiagramURL:
 
   \          type: string
 
   \          description: Image URL for field diagram
 
-  \        created_at:
+  \        createdAt:
 
   \          type: string
 
   \          description: beginner course created date
+
+  \    userCreated:
+
+  \      properties:
+
+  \        id:\ 
+
+  \          type: integer
+
+  \          description: primary key, id of the user created course
+
+  \        sportName:
+
+  \          type: string
+
+  \          description: name of sport the course is listed under
+
+  \        userId:\ 
+
+  \          type: integer
+
+  \          description: Id of user who created the course
+
+  \        courseTitle:
+
+  \          type: string
+
+  \          description: title of the course
+
+  \        courseShortDescription:
+
+  \          type: string
+
+  \          description: Sentence long hook for the user to draw in readers,
+  shown in course list page
+
+  \        courseCoverImageURL:
+
+  \          type: string
+
+  \          description: Cover image, shown in course list page
+
+  \        courseContent:
+
+  \          type: string
+
+  \          description: main content of the course
+
+  \        courseTutorialVideoURL:
+
+  \          type: string
+
+  \          description: URL to tutorial video\ 
+
+  \        courseTipsTricks:
+
+  \          type: string
+
+  \          description: content for tips and tricks
+
+  \        created_at:
+
+  \          type: string
+
+  \          description: course created date
 
   \         \ 
 
