@@ -149,6 +149,8 @@ List the API endpoints you will need to implement.
 |Create|POST|Creates a new user account|6, 8, 10|
 |Read|GET|Fetch the user's profile|6, 8, 10|
 |Read|GET|Fetches a list of teams for a sport|3, 7|
+|Read|GET|Fetches the newest games for a sport|3, 7|
+|Read|GET|Fetches the latest news for a sport|3, 7|
 |Create|POST|Allows the user to follow a team|3, 7, 10|
 |Read|GET|Fetches detailed information about a specific team|3, 7, 10|
 |Read|GET|Fetches images for courses of a specific sport|4, 9|
