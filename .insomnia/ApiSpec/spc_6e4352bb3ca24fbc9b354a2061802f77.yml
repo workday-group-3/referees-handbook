@@ -1,7 +1,7 @@
 _id: spc_6e4352bb3ca24fbc9b354a2061802f77
 type: ApiSpec
 parentId: wrk_f877917a9e794c85bc805f7c64361ae3
-modified: 1657656118927
+modified: 1657659517670
 created: 1657645817294
 fileName: referee-handbook-v1.yaml
 contents: "openapi: 3.0.3
@@ -36,6 +36,32 @@ contents: "openapi: 3.0.3
 
   \      summary: User can login with valid credentials.
 
+  \      requestBody:
+
+  \        content:
+
+  \          application/json:
+
+  \            schema:
+
+  \              type: object
+
+  \              properties:
+
+  \                email:
+
+  \                  type: string
+
+  \                password:
+
+  \                  type: string
+
+  \              example:
+
+  \                email: me@mail.com
+
+  \                password: pw    \ 
+
   \      responses:
 
   \        \"200\":
@@ -46,17 +72,300 @@ contents: "openapi: 3.0.3
 
   \            application/json:
 
+  \              example:
+
+  \                user:
+
+  \                  id: 1
+
+  \                  email: me@mail.com
+
+  \                  firstName: Doug
+
+  \                  lastName: Case
+
+  \                  username: dougcase
+
+  \                token: myToken
+
+  \              schema:
+
+  \                $ref: \"#/components/schemas/user\"  \ 
+
+  \        \"401\":
+
+  \          description: Unauthorized
+
+  \          content:
+
+  \            application/json:
+
+  \              example:
+
+  \                error:
+
+  \                  message: Invalid email/password combo
+
+  \                  status: 401
+
   \              schema:
 
   \                $ref: \"#/components/schemas/user\"
 
-  \                 \ 
+  \         \ 
+
+  \  \"/auth/register\":
+
+  \    post:
+
+  \      tags: [\"auth\"]
+
+  \      summary: User can register with valid credentials.
+
+  \      requestBody:
+
+  \        content:
+
+  \          application/json:
+
+  \            schema:
+
+  \              type: object
+
+  \              properties:
+
+  \                email:
+
+  \                  type: string
+
+  \                password:
+
+  \                  type: string
+
+  \                first_name:
+
+  \                  type: string
+
+  \                last_name:
+
+  \                  type: string
+
+  \                username:
+
+  \                  type: string
+
+  \                location:
+
+  \                  type: string
+
+  \         \ 
+
+  \              example:
+
+  \                email: me@mail.com
+
+  \                password: pw \ 
+
+  \                first_name: Doug
+
+  \                last_name: Case
+
+  \                username: dougcase
+
+  \                location: Sunnyvale, CA
+
+  \              required:
+
+  \                - email
+
+  \                - password
+
+  \               \ 
+
+  \      responses:
+
+  \        \"201\":
+
+  \          description: Success
+
+  \          content:
+
+  \            application/json:
+
+  \              example:
+
+  \                user:
+
+  \                  id: 1
+
+  \                  email: me@mail.com
+
+  \                  firstName: Doug
+
+  \                  lastName: Case
+
+  \                  username: dougcase
+
+  \                token: myToken
+
+  \              schema:
+
+  \                $ref: \"#/components/schemas/user\"  \ 
+
+  \        \"400\":
+
+  \          description: Unauthorized
+
+  \          content:
+
+  \            application/json:
+
+  \              example:
+
+  \                error:
+
+  \                  message: \"Duplicate email: me@mail.com\"
+
+  \                  status: 400
+
+  \              schema:
+
+  \                $ref: \"#/components/schemas/user\"
+
+
+  \  \"/auth/me\":
+
+  \    get:
+
+  \      tags: [\"auth\"]
+
+  \      summary: get one user's profile information
+
+  \      responses:
+
+  \        \"200\":
+
+  \          description: OK
+
+  \          content:
+
+  \            application/json:
+
+  \              schema:
+
+  \                $ref: \"#/components/schemas/user\"
+
+  \              example:
+
+  \                id: 1
+
+  \                email: me@mail.com
+
+  \                firstName: Doug
+
+  \                lastName: Case
+
+  \                username: dougcase
+
+  \        \"401\":
+
+  \          description: Unauthorized
+
+  \          content:
+
+  \            application/json:
+
+  \              example:
+
+  \                error:
+
+  \                  message: Unauthorized
+
+  \                  status: 401
+
+  \              schema:
+
+  \                $ref: \"#/components/schemas/user\"
+
+
+  \  \"/learning/:sportName\":
+
+  \    get:
+
+  \      tags: [\"learning\"]
+
+  \      summary: returns list of courses for a sport
+
+  \      responses:
+
+  \        \"200\":
+
+  \          description: OK
+
+  \          content:\ 
+
+  \            application/json:
+
+  \              schema:
+
+  \                $ref: \"#/components/schemas/beginner\"
+
+  \              example:
+
+  \                id: 1
+
+  \                sport_name: basketball
+
+  \                beginner_history_timeline:
+  \"https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1xu\
+  Y4upIooEeszZ_lCmeNx24eSFWe0rHe9ZdqH2xqVNk&font=Default&lang=en&initial_zoom=2\
+  &height=100%\"
+
+  \                beginner_rules: Score more points than the other team to
+  win
+
+  \                beginner_short_description: Learn about the sport of
+  basketball
+
+  \                beginner_cover_image_URL:
+  \"https://avatars.githubusercontent.com/u/108555405?s=400&u=49904b08dfecbfdac\
+  6d3b0ff333e899844c2eeee&v=4\"
+
+  \                beginner_tutorial_video_URL:
+  \"https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley\"
+
+  \                beginner_field_diagram_URL: \"www.google.com\"
+
+  \                created_at: \"2019-06-24-15.30.20\"
+
+  \        \"404\":
+
+  \          description: not found
+
+  \          content:\ 
+
+  \            application/json:
+
+  \              schema:
+
+  \                $ref: \"#/components/schemas/beginner\"
+
+  \              example:
+
+  \                error:
+
+  \                  message: \"course does not exist\"
+
+  \                  status: 404
+
+  \         \ 
+
 
   components:
 
   \  schemas:
 
-  \    post:
+  \    user:
 
   \      type: object
 
@@ -64,27 +373,120 @@ contents: "openapi: 3.0.3
 
   \        id:
 
-  \          type: number
+  \          type: integer
 
-  \          description: ID of the post
+  \          description: Primary key, ID of the user
 
-  \        title:
-
-  \          type: string
-
-  \          description: title of the post
-
-  \        body:
+  \        email:
 
   \          type: string
 
-  \          description: Body of the post
+  \          description: email of the user
 
-  \        userId:
+  \        username:
 
-  \          type: number
+  \          type: string
 
-  \          description: ID of the user who created the post
+  \          description: username of user
+
+  \        password:
+
+  \          type: string
+
+  \          description: password of the user
+
+  \        first_name:
+
+  \          type: string
+
+  \          description: first name of the user
+
+  \        last_name:
+
+  \          type: string
+
+  \          description: last name of the user
+
+  \        location:
+
+  \          type: string
+
+  \          description: city and state of the user
+
+  \        created_at:
+
+  \          type: string
+
+  \          format: date-time
+
+  \          description: creation date of the account of the user
+
+  \    beginner:
+
+  \      type: object
+
+  \      properties:
+
+  \        id:\ 
+
+  \          type: integer
+
+  \          description: primary key, id of the course
+
+  \        sport_name:
+
+  \          type: string
+
+  \          description: name of sport the course is listed under
+
+  \        beginner_history_timeline:
+
+  \          type: string
+
+  \          description: timeline URL for iframe to run timeline widget
+
+  \        beginner_rules:
+
+  \          type: string
+
+  \          description: rules of the sport
+
+  \        beginner_short_description:
+
+  \          type: string
+
+  \          description: Sentence long hook for the user to draw in readers,
+  shown in course list page
+
+  \        beginner_cover_image_URL:
+
+  \          type: string
+
+  \          description: Cover image, shown in course list page
+
+  \        beginner_tutorial_video_URL:
+
+  \          type: string
+
+  \          description: URL to tutorial video for sport
+
+  \        beginner_field_diagram_URL:
+
+  \          type: string
+
+  \          description: Image URL for field diagram
+
+  \        created_at:
+
+  \          type: string
+
+  \          description: beginner course created date
+
+  \         \ 
+
+  \     \ 
+
+  \         \ 
 
   \        \ 
 
