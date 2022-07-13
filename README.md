@@ -15,8 +15,8 @@ Project Code Repository Links
 * [Repo link](https://github.com/Ernesto905/Capstone-Starter-Code)
 * [API Docs repo link](https://github.com/aileen-ji/CapstoneAPIDocs)
 
-* [Frontend Repo Link]()
-* [Backend Repo Link]()
+* [Frontend Repo Link](https://github.com/workday-group-3/referee-handbook-Frontend)
+* [Backend Repo Link](https://github.com/workday-group-3/referee-handbook-Backend)
 
 ## Project Overview
 
