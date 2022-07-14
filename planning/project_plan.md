@@ -76,7 +76,11 @@ Potential pain points might be navigating the discovery page and being able to f
 
 Login, registration, landing, home, profile, learning center, beginner course, user created course
 
-Wireframes contained in figma link below:
+MVP wireframes (high fidelity):
+
+[![image](https://user-images.githubusercontent.com/73731802/179061253-e47607d0-29bf-4332-b594-b3f6c61949cc.png)](https://www.figma.com/file/6C4n8jyxLDV2LetttFvioE/Referee-handbook-wireframe?node-id=0%3A1)
+
+All wireframes contained in figma link below:
 
 [![image](https://user-images.githubusercontent.com/73731802/178373605-807ca31c-7998-485c-a6c7-2dabb8d9209e.png)](https://www.figma.com/file/6C4n8jyxLDV2LetttFvioE/Referee-handbook-wireframe?node-id=0%3A1)
 
@@ -97,15 +101,6 @@ User Table:
 | location | text | User's city and state |
 | created_at | date | User's account creation date |
 
-Followers to following Table:
-
-| Column Name | Type | Description |
-| ----------- | ---- | ----------- |
-| follower_id | integer | Primary key |
-| following_id | integer | Id of team user is following |
-| following_at | date | Date user started following the team |
-
-
 
 Beginner courses Table:
 
@@ -124,6 +119,15 @@ Beginner courses Table:
 
 
 ## POST MVP ADDITIONS FOR DATA MODEL
+
+Followers to following Table:
+
+| Column Name | Type | Description |
+| ----------- | ---- | ----------- |
+| follower_id | integer | Primary key |
+| following_id | integer | Id of team user is following |
+| following_at | date | Date user started following the team |
+
 
 User created courses Table:
 
@@ -148,18 +152,23 @@ List the API endpoints you will need to implement.
 
 | CRUD | HTTP Verb | Description | User stories |
 | ---- | --------- | ----------- |------------|
-|Read|GET|Fetches standings, recent matches and news about a specific sport|3, 7|
 |Read|POST|Logs the user in|6, 8, 10|
 |Create|POST|Creates a new user account|6, 8, 10|
 |Read|GET|Fetch the user's profile|6, 8, 10|
+|Read|GET|Fetches images for courses of a specific sport|4, 9|
+|Read|GET|Fetches the beginner course for a specific sport|1, 4, 5|
+
+## POST MVP ADDITIONAL ENDPOINTS
+
+| CRUD | HTTP Verb | Description | User stories |
+| ---- | --------- | ----------- |------------|
+|Read|GET|Fetches standings, recent matches and news about a specific sport|3, 7|
 |Read|GET|Fetches a list of teams for a sport|3, 7|
 |Read|GET|Fetches the newest games for a sport|3, 7|
 |Read|GET|Fetches the latest news for a sport|3, 7|
 |Create|POST|Allows the user to follow a team|3, 7, 10|
 |Read|GET|Fetches detailed information about a specific team|3, 7, 10|
-|Read|GET|Fetches images for courses of a specific sport|4, 9|
 |Create|POST|Creates a new course for a specific sport|6, 8|
-|Read|GET|Fetches the beginner course for a specific sport|1, 4, 5|
 |Read|GET|Fetches a list of user created courses for a specific sport|2, 4, 9|
 |Read|GET|Fetches a specific course created by a user|2, 9|
 
