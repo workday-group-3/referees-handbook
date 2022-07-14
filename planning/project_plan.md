@@ -121,6 +121,10 @@ Beginner courses Table:
 | beginner_field_diagram_URL | text | Image URL for field diagram |
 | created_at | date | Beginner course created date |
 
+
+
+## POST MVP ADDITIONS FOR DATA MODEL
+
 User created courses Table:
 
 | Column Name | Type | Description |
