@@ -155,7 +155,6 @@ List the API endpoints you will need to implement.
 |Read|POST|Logs the user in|6, 8, 10|
 |Create|POST|Creates a new user account|6, 8, 10|
 |Read|GET|Fetch the user's profile|6, 8, 10|
-|Read|GET|Fetches images for courses of a specific sport|4, 9|
 |Read|GET|Fetches the beginner course for a specific sport|1, 4, 5|
 
 ## POST MVP ADDITIONAL ENDPOINTS
