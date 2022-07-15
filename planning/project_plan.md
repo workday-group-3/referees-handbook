@@ -149,6 +149,7 @@ User created courses Table:
 
 List the API endpoints you will need to implement.
 
+See API docs at [LINK](https://aileen-ji.github.io/CapstoneAPIDocs/)
 
 | CRUD | HTTP Verb | Description | User stories |
 | ---- | --------- | ----------- |------------|
