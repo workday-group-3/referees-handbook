@@ -54,21 +54,21 @@ Potential pain points might be navigating the discovery page and being able to f
 
 - [x] As a Middle school football coach, I want to have open access to rules and regulations in an easily accessible manner and format, because I want to see if any plays I have in mind violate any rules. 
 
-- [ ] As an intermediate level tennis player, I want a platform that offers tips and strategies by other players which would serve to increase my current skills because it is often difficult to find online resources for my current skill level. 
+- [x] As an intermediate level tennis player, I want a platform that offers tips and strategies by other players which would serve to increase my current skills because it is often difficult to find online resources for my current skill level. 
 
-- [ ] As a basketball fan, I want a platform that displays all things related to basketball (or my favorite team) in an intuitive and digestible way because using search engines often takes too much time and the process of finding useful information can be roundabout. 
+- [x] As a basketball fan, I want a platform that displays all things related to basketball (or my favorite team) in an intuitive and digestible way because using search engines often takes too much time and the process of finding useful information can be roundabout. 
 
 - [x] As a beginner soccer player, I wish to find a platform for learning more about how to get better at the game because, as a complete beginner, I’m not sure where I should start in my sports journey. 
 
 - [x] As a student studying the history of my new favorite sport, I want to see it's evolution throughout the years
 
-- [ ] As a retired basketball coach, I want to create online courses for others so I can share my passion and accumulated understanding of the game with future players. 
+- [x] As a retired basketball coach, I want to create online courses for others so I can share my passion and accumulated understanding of the game with future players. 
 
-- [ ] As an NBA fan, I want a website that delivers up to date basketball news because I love keeping up with the latest updates on players and teams. 
+- [x] As an NBA fan, I want a website that delivers up to date basketball news because I love keeping up with the latest updates on players and teams. 
 
-- [ ] As an innovative tennis player, I want a website that allows me to share my upcoming and new techniques, because I love showing newer players my hidden strategies in tennis.
+- [x] As an innovative tennis player, I want a website that allows me to share my upcoming and new techniques, because I love showing newer players my hidden strategies in tennis.
 
-- [ ] As someone who likes to dabble in all sports, I want one central hub that I can rely on so I can keep up to date with new courses & strategies in each sports community and stay on top of my game.
+- [x] As someone who likes to dabble in all sports, I want one central hub that I can rely on so I can keep up to date with new courses & strategies in each sports community and stay on top of my game.
 
 - [ ] As a Golden State Warriors fan, I want to be able to keep up with their recents game quickly and see an up to date stat sheet with their win/loss record, so I can keep up with analysts when I watch the game.
 
