@@ -18,7 +18,6 @@ Project Code Repository Links
 
 ## Project Overview
 
-Add a quick summary of what your project theme and objectives are. 
 Our overall project theme was a sports-centric Khan Academy meets Masterclass, and the objectives were to take a beginner from zero to hero in that sport.
 
 Deployment Website: **https://referees-handbook.netlify.app/**
